@@ -38,3 +38,8 @@
       with_dict: "{{ timers }}"
 
   when: timers is defined and (systemd_timers_enabled | bool)
+  tags:
+    - setup-all
+    - setup-systemd-timers
+    - install-all
+    - install-systemd-timers
