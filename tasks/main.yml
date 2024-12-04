@@ -37,4 +37,4 @@
           scope: "{{ systemd_scope | default('system') }}"
       with_dict: "{{ timers }}"
 
-  when: timers is defined
+  when: timers is defined and (systemd_timers_enabled | bool)
